@@ -1,0 +1,40 @@
+<!--Sayantika Kandar-->
+<!--This page navigates to Survey.xhtml and ListSurvey.xhtml upon clicking on the links given below  -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+<style>
+body 
+{
+    background-color: lightblue; 
+}
+
+h1 {
+    color: red; 
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+</style>
+</h:head>
+<h:body>
+<h:form>
+<h:panelGrid columns="1">
+<h1>Welcome to home page</h1>
+<h:outputText value="You can take a survey by clicking on the link below"/>
+<h:outputLink value="Survey.xhtml">Survey</h:outputLink>
+<h:outputText value="You can view the lists of survey by clicking on the link below"/>
+<h:commandButton value="ListSurvey" action="#{survey.listsurveyAction}"/><!-- Button created -->
+<h4>Thank You</h4>
+</h:panelGrid>
+</h:form>
+</h:body>
+
+</html>

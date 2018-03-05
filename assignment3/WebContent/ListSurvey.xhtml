@@ -1,0 +1,81 @@
+<!--Name: Sayantika Kandar-->
+<!--  This page is used to list all the student survey records in a tabular format -->
+<!--This page navigates to home.xhtml upon clicking on the link given below  -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<title> List of all Student Survey Records</title>
+<style>
+body  {
+		background-color : lightblue;
+	   }
+</style>
+</h:head>
+<h:body>
+		<center><h1> List of all Student Survey</h1></center>
+		<h:dataTable value="#{survey.student_arr}" var="stu" border="1"><!-- Table is created -->
+		<h:column>
+			<f:facet name="header"> First name</f:facet>
+			#{stu.firstname}
+		</h:column>
+		
+		<h:column>
+			<f:facet name="header"> Last name</f:facet>
+			#{stu.lastname}
+		</h:column>
+		
+		<h:column>
+			<f:facet name="header"> Street Address</f:facet>
+			#{stu.saddress}
+		</h:column>
+		
+		<h:column>
+			<f:facet name="header"> City</f:facet>
+			#{stu.city}
+		</h:column> 
+		
+		<h:column>
+			<f:facet name="header"> State</f:facet>
+			#{stu.state}
+		</h:column> 
+		
+ 	<h:column>
+			<f:facet name="header"> Zipcode</f:facet>
+			#{stu.zip}
+		</h:column> 
+		
+		<h:column>
+			<f:facet name="header"> Tel No</f:facet>
+			#{stu.tphn}
+		</h:column>
+		
+	
+		<h:column>
+			<f:facet name="header"> Email id</f:facet>
+			#{stu.email}
+		</h:column>
+			
+		<h:column>
+			<f:facet name="header"> Source of Information</f:facet>
+			#{stu.radiob}
+		</h:column>
+		<h:column>
+		<f:facet name="header">Recommendation</f:facet>
+		#{stu.dropd}
+		</h:column>
+		<h:column>
+		<f:facet name="header"> Raffle Ticket</f:facet>
+		#{stu.raf}
+		</h:column>
+		<h:column>
+		<f:facet name="header">Comments</f:facet>
+		#{stu.comments}
+		</h:column>
+						</h:dataTable>
+				
+</h:body>
+</html>
