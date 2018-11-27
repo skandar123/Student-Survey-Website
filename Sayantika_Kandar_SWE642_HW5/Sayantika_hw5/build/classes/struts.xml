@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<!--
+NAME: SAYANTIKA KANDAR
+This Struts.xml maps the logic and the .jsp files of this program
+ -->
+<struts>
+	<package name="default" extends="struts-default" namespace="/">
+        
+		<action name="survform" class="controller.Place" method="execute">
+            <result name="SimpleACK">/SimpleAcknowledgement.jsp</result>
+            <result name="WinnerACK">/WinnerAcknowledgement.jsp</result>
+        </action>
+        
+         <action name="view" class="controller.Receive" method="execute">
+            <result name="Studentfound">/StudentJSP.jsp</result>
+            <result name="Studentnotfound">/NoSuchStudentJSP.jsp</result>
+        </action>
+     </package>
+</struts>
